@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title></title>
+    <script src="https://kit.fontawesome.com/5ff178202e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <menu>
+
+        <div class="Menu-botao">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <p>Menu</p>
+        </div>
+
+
+        <div>
+            <a href="#"><i class="fa-solid fa-square-plus"></i>
+                <p>Adicionar</p>
+            </a>
+
+        </div>
+        <div>
+            <a href="#"><i class="fa-solid fa-cake-candles"></i></a>
+            <p>Aniversários</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-regular fa-handshake"></i></a>
+            <p>Reuniões</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-solid fa-masks-theater"></i></a>
+            <p>Eventos Gerais</p>
+        </div>
+        <div>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+            <p>Favoritos</p>
+        </div>
+    </menu>
+    <div class="container">
+        <div class="calendario">
+            <div class="data">
+                <p>2023</p>
+                <p>Dezembro</p>
+                <p id="dia">07</p>
+            </div>
+            <div class="Dias" id="dias">
+              
+            </div>
+
+        </div>
+
+        <div>
+            <div class="eventos">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let dias = document.getElementById("dias")
+        for(let i = 1; i < 32; i++) {
+            let div = document.createElement("div")
+            div.textContent = i
+            div.onclick = () => {
+                document.getElementById("dia").textContent = div.textContent
+            }
+            dias.appendChild(div);
+        }
+    </script>
+</body>
+
+</html>
